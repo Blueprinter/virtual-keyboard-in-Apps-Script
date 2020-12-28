@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--
+  The code in this file H_Index.html has no license -
+  You can do whatever you want with it -
+-->
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <?!= loadCSS_(["CSS_Keyboard"]) ?>
+      <?!= getSkrpt_(["JS_Keyboard"]) ?>
+      <style>
+         .content {
+         max-width: 500px;
+         margin: auto;
+         padding: 100px;
+         background-color: #99994d;
+         }
+      </style>
+      <title>Virtual-Keyboard</title>
+   </head>
+   <body>
+      <div class="content">
+         <div>The original code for the virtual keyboard is at: https://github.com/furcan/KioskBoard</div>
+         <div>This implementation is at: https://github.com/Blueprinter/virtual-keyboard-in-Apps-Script</div>
+         <br/>
+         
+         <div>This example has 3 configurations:</div>
+         <ul>
+            <li>Full Keyboard Example</li>
+            <li>Keyboard - No top row of numbers</li>
+            <li>Number Pad</li>
+         </ul>
+
+         <br/>
+         
+         <div>To make a keyboard appear click inside one of the input fields</div>
+         <br/>
+
+         <!-- An example of a textarea element: Keyboard type is "all" and the availability of special characters is "true". -->
+         <label>Full Keyboard Example</label><br/>
+         <textarea class="virtual-keyboard" data-kioskboard-type="all" data-kioskboard-specialcharacters="true" placeholder="Your Address"></textarea>
+         <br/>
+         <!-- An example of an input element: Keyboard type is "keyboard" and the availability of special characters is "false". -->
+         <label>Keyboard Example with no top row of numbers or special characters</label><br/>
+         <input class="virtual-keyboard" data-kioskboard-type="keyboard" data-kioskboard-specialcharacters="false" placeholder="Your Name" />
+         <br/>
+         <br/>
+         <!-- An example of an input element: Keyboard type is "numpad". (special characters are not allowed for the "numpad" type.) -->
+         <label>Number Pad Example</label><br/>
+         <input class="virtual-keyboard" data-kioskboard-type="numpad" placeholder="Your Number" /> 
+      </div>
+      <?!= getSkrpt_(["JS_InitializeConfigure"]) ?>
+   </body>
+</html>
+
